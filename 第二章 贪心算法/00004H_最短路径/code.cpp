@@ -1,13 +1,13 @@
-//µÏ¿ÆË¹³¹×î¶ÌÂ·¾¶Ëã·¨£¨µ¥Ô´×î¶ÌÂ·¾¶£©
+//ï¿½Ï¿ï¿½Ë¹ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ã·¨ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½
 #include<iostream>
 using namespace std;
-//¶¥µã¸öÊý
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 const int CITY = 5;
-//¶¨ÒåÎÞÇî
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 const int INF = 1000;
-//Ê¹ÓÃ¶þÎ¬Êý×é´æ´¢ÁÚ½Ó¾ØÕó
-//ÔÚ´ËÎÒÃÇÖ±½ÓÔÚÔ´´úÂëÖÐÌí¼ÓÁÚ½Ó¾ØÕóÐÅÏ¢
-//ÎªÁËÊÇÅª¶®³ÌÐòÁ÷³Ì¶ø·ÇÊµ¼ÊÎÊÌâ
+//Ê¹ï¿½Ã¶ï¿½Î¬ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½Ú½Ó¾ï¿½ï¿½ï¿½
+//ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú½Ó¾ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+//Îªï¿½ï¿½ï¿½ï¿½Åªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 int map[CITY][CITY]={
 {INF,2,5,INF,INF},
 {INF,INF,2,6,INF},
@@ -15,13 +15,13 @@ int map[CITY][CITY]={
 {INF,INF,2,INF,4},
 {INF,INF,INF,INF,INF}
 };
-//distÊý×éÓëpÇ°ÇýÊý×é
+//distï¿½ï¿½ï¿½ï¿½ï¿½ï¿½pÇ°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 int dist[CITY]={0};
 int p[CITY]={0}; 
-//±êÖ¾Êý×é(±íÊ¾¶¥µãÊÇ·ñ¼ÓÈëÁËSÕ½¶Ó)
+//ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½SÕ½ï¿½ï¿½)
 int Flag[CITY]={0}; 
 
-//Êä³öÂ·¾¶ 
+//ï¿½ï¿½ï¿½Â·ï¿½ï¿½ 
 void FindRoad(int last,int origin){
 	if(dist[last]==INF){
 		printf("Error not find Road\n");
@@ -34,10 +34,10 @@ void FindRoad(int last,int origin){
 	printf(" %d ",last);
 }
 
-//Ö÷º¯Êý 
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 int main(int argc,char**argv){
 	int i,j;
-	//Êä³öÁÚ½Ó¾ØÕó 
+	//ï¿½ï¿½ï¿½ï¿½Ú½Ó¾ï¿½ï¿½ï¿½ 
 	printf("map:\n");
 	for(i=0;i<CITY;i++){
 		for(j=0;j<CITY;j++){
@@ -48,13 +48,13 @@ int main(int argc,char**argv){
 		}
 		printf("\n");
 	}
-	//Ñ¡ÔñÔ´µã,Ñ¡Ôñ0ÎªÔ´µã
+	//Ñ¡ï¿½ï¿½Ô´ï¿½ï¿½,Ñ¡ï¿½ï¿½0ÎªÔ´ï¿½ï¿½
 	int origin=0;
-	//½«Ô´µãÈëSÕ½¶Ó
+	//ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½SÕ½ï¿½ï¿½
 	Flag[origin]=1; 
-	//³õÊ¼»¯distÊý×éÓëÇ°ÇýÊý×é
+	//ï¿½ï¿½Ê¼ï¿½ï¿½distï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	for(i=0;i<CITY;i++){ 
-		if(i==origin){//distÊý×é
+		if(i==origin){//distï¿½ï¿½ï¿½ï¿½
 			dist[i]=0;
 			p[i]=-1;
 		}else{
@@ -66,7 +66,7 @@ int main(int argc,char**argv){
 			}
 		}
 	}
-	//Êä³ödistÊý×éÓëÇ°ÇýÊý×é
+	//ï¿½ï¿½ï¿½distï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	printf("dist:\n");
 	for(i=0;i<CITY;i++){
 		printf(" %d ",dist[i]);
@@ -76,22 +76,22 @@ int main(int argc,char**argv){
 		printf(" %d ",p[i]);
 	}	
 	printf("\n");
-	//ÎÒÃÇÒªÑ¡Ôñn´Î×îÐ¡dist
+	//ï¿½ï¿½ï¿½ï¿½ÒªÑ¡ï¿½ï¿½nï¿½ï¿½ï¿½ï¿½Ð¡dist
 	for(i=0;i<CITY;i++){
-		//ÔÚ¼¯ºÏv-sÖÐÕÒdist×îÐ¡µÄ
-		int temp = INF,t=origin;//tÎªÕÒµ½µÄ½á¹û
+		//ï¿½Ú¼ï¿½ï¿½ï¿½v-sï¿½ï¿½ï¿½ï¿½distï¿½ï¿½Ð¡ï¿½ï¿½
+		int temp = INF,t=origin;//tÎªï¿½Òµï¿½ï¿½Ä½ï¿½ï¿½
 		for(j=0;j<CITY;j++){
 			if(Flag[j]==0&&dist[j]<temp){
 				temp=dist[j];
 				t=j;
 			}
 		} 
-		if(t==origin){//v-sÎª¿Õ 
+		if(t==origin){//v-sÎªï¿½ï¿½ 
 			break;
 		}
-		//¸üÐÂSÕ½¶Ó
+		//ï¿½ï¿½ï¿½ï¿½SÕ½ï¿½ï¿½
 		Flag[t]=1;
-		//¸üÐÂdistÊý×éÓëÇ°ÇýÊý×é,¼´½è¶«·ç
+		//ï¿½ï¿½ï¿½ï¿½distï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½è¶«ï¿½ï¿½
 		for(j=0;j<CITY;j++){
 			if(Flag[j]==0&&map[t][j]<INF){
 				if(dist[j]>dist[t]+map[t][j]){
@@ -101,15 +101,15 @@ int main(int argc,char**argv){
 			}
 		} 
 	} 		
-	//Êä³öÇ°ÇýÊý×é
-	printf("×î¶ÌÂ·¾¶Ç°ÇýÊý×éÎª\n");
+	//ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	printf("ï¿½ï¿½ï¿½Â·ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª\n");
 	for(i=0;i<CITY;i++){
 		printf(" %d ",p[i]);
 	} 
 	printf("\n");
 	
-	//Çó×î¶ÌÂ·¾¶ÎÒÃÇ¿ÉÒÔ²ÉÓÃµÝ¹é»òÕßÀûÓÃÕ»µÄ·½·¨
-	//FindRoad(4,origin);//µÚÒ»¸ö²ÎÊýÎªÖÕµã£¬µÚ¶þ¸ö²ÎÊýÎªÔ´µã 
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½Ô²ï¿½ï¿½ÃµÝ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ»ï¿½Ä·ï¿½ï¿½ï¿½
+	//FindRoad(4,origin);//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Õµã£¬ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÔ´ï¿½ï¿½ 
 	for(i=0;i<CITY;i++){
 		FindRoad(i,origin);
 		printf("\n");
