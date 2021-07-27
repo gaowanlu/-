@@ -113,7 +113,7 @@ int Isap(int s,int t,int n){//isap增广算法
                     ans+=d;
                     d=INF;
                 }
-                break;
+                break;//找到一条可行邻接边，退出for循环，停止寻找可行邻接边
             }
         }
         if(-1==i){//所有邻接边搜索完毕,无法前行
